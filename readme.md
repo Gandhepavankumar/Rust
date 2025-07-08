@@ -13,4 +13,19 @@
         No Synchronzation is need so proccess can be done concurently
 
     (2) Stack V/S Heap Memory Allocation 
-        
+
+        Stack is used for the primitive data type (which are allocated at compile time)
+
+        Heap on string,Vector like runtime 
+
+        fn main(){
+            let x :i8 = 3;
+            println!("{}",x);  ---> stack they **USED TO STORE IN THE STACK FRAME WORK ONE FUNCTION ONE LAYER AND DYANAMIC ARE POINTED TO HEAD FIRST HEAD ADDRESS
+**
+
+            let str: String = String::form("Hello");--->head
+            println!("{}",str);
+
+        }
+
+           

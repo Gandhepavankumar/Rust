@@ -46,8 +46,13 @@ fn main() {
 
     println!("Help");
 
+    let a : i8 = 10;
+    let b : i8 = 20;
+    println!("res : {}",sum(a,b));
+}
 
-
+fn sum(a:i8, b:i8) -> i8 {
+    return a + b;
 }
 
 
