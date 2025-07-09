@@ -1,3 +1,9 @@
+mod ruststruct;
+
+struct Point<T>{
+    x: T,
+    y: T,
+}
 fn main() {
     // print!("Hello, world!");
     // let  str = String::from("Hello, Rust!");
@@ -44,16 +50,44 @@ fn main() {
 
      */ 
 
-    println!("Help");
+    // println!("Help");
 
-    let a : i8 = 10;
-    let b : i8 = 20;
-    println!("res : {}",sum(a,b));
+    // let a : i8 = 10;
+    // let b : i8 = 20;
+    // println!("res : {}",sum(a,b));
+
+
+    // SCOPE 
+    let a :i8 = 10;
+    {
+        let b :i8 = 20;
+        println!("a: {}, b: {}", a, b);
+    }
+    //println!("a: {}, b: {}", a, b); // This will give error
+
+    let s1 = String::from("Hello");
+    let s2 = s1.clone(); // This will move the ownership of s1 to s2
+    println!("String: {}", s2);
+
+    let mut str = String::from("Hello, Rust!");
+    let str1 = &str;
+    println!("String: {}", str1);
+    update(&mut str);
+
+    let rect = ruststruct::Rectangle {
+        width: 30,
+        height: 50,
+    };
+    println!("Area of Rectangle: {}", rect.area());
+
+
+
 }
 
-fn sum(a:i8, b:i8) -> i8 {
-    return a + b;
-}
+// fn sum(a:i8, b:i8) -> i8 {
+
+//     return a + b;
+// }
 
 
 // fn get_first_word(str :String)->String{
@@ -67,3 +101,9 @@ fn sum(a:i8, b:i8) -> i8 {
 //     }
 //     return res;
 // }
+
+
+fn update(str: &mut String) {
+    str.push_str(" Updated");
+    println!("Updated String: {}", str);
+}

@@ -28,4 +28,15 @@
 
         }
 
+        while using string the OWNERSHIP policy says i maintain single owner at a time it can change owner like
+        let x = String::form("hello");
+        let y = x;
+        Here the x lost it's ownership(direct way);
+        it can lost by using indriect way also 
+        by passing in funtion void lost
+        return if storing in same var the owneship returnns
+
+
+    4) Barowing and  refrence
+        
            
