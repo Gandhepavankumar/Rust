@@ -37,6 +37,20 @@
         return if storing in same var the owneship returnns
 
 
-    4) Barowing and  refrence
-        
+    4) Barowing and  reference
+        let x = 10;
+        let y = x;
+        let z = x;
+        // Barowinng 
+
+        let mut str = String::form("hello");
+        let sec_str = &str;
+        Acceptable at passing refrence BUT
+
+        let mut str = String::form("hello");
+        let sec_Str = &str;
+        let thr_str = &str;
+         // Not ACCEPTABLE;
+         
+
            

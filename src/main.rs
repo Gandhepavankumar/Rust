@@ -1,9 +1,7 @@
 mod ruststruct;
+mod vec;
+mod hashmaps;
 
-struct Point<T>{
-    x: T,
-    y: T,
-}
 fn main() {
     // print!("Hello, world!");
     // let  str = String::from("Hello, Rust!");
@@ -79,8 +77,8 @@ fn main() {
         height: 50,
     };
     println!("Area of Rectangle: {}", rect.area());
-
-
+    vec::vector();
+    hashmaps::hashmaps();
 
 }
 
